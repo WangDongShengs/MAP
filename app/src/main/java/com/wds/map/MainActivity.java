@@ -105,13 +105,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         baiduMap.setMyLocationEnabled(true);
         initLocation();
         initPermission();
+        //覆盖物
         initMarker();
     }
 
     private void initMarker() {
+        //屏幕的点击事件
         BaiduMap.OnMapClickListener listener=new BaiduMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
+                //获取点击的定点
                 lat = latLng;
                 marker(latLng);
 
